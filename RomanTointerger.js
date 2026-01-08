@@ -14,7 +14,7 @@ var romanToInt = function(s) {
 
     let total = 0;
 
-    for (let i = 0; i < s.length; i++) {
+    for (let i = s.length; i >= 0; i--) {
         let curr = value(s[i]);
         let next = value(s[i + 1]);
 
@@ -24,10 +24,10 @@ var romanToInt = function(s) {
             total += curr;
         }
 
-        console.log(curr)
+        // console.log(curr)
     }
 
     return total;
 };
 
-console.log(romanToInt("IIXIXIV"));
+console.log(romanToInt("MCMXCIV"));
